@@ -8,6 +8,6 @@ run:
 infos:
 		@$(DC) config
 
-stop:
+clean:
 		@$(DC) down -v --remove-orphans
 

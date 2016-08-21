@@ -6,8 +6,8 @@
 $ make 
 ----
 
-=== Stop
+=== Stop and clean
 [source,shell] 
 ----
-$ make stop
+$ make clean
 ----
