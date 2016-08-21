@@ -1,0 +1,13 @@
+== Basic Wordpress/Mysql project using docker-compose
+
+=== Setup
+[source,shell] 
+----
+$ make 
+----
+
+=== Stop
+[source,shell] 
+----
+$ make stop
+----
