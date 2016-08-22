@@ -1,16 +1,22 @@
-web:
-  image: wordpress
-  links:
-    - mysql
-  environment:
-    - WORDPRESS_DB_PASSWORD=sample
-  ports:
-    - "8090:80"
+version: '2'
+services:
 
-mysql:
-  image: mysql:latest
-  environment:
-    - MYSQL_ROOT_PASSWORD=sample
-    - MYSQL_DATABASE=wordpress
-#  volumes:
-#    - ./mysql/data:/var/lib/mysql
+  web:
+    image: wordpress
+    links:
+      - mysql
+    environment:
+      - WORDPRESS_DB_PASSWORD=sample
+  #  volumes:
+  #    - wordpress/wp_html:/var/www/html
+    ports:
+      - "8082:80"
+    # - "127.0.0.3:8082:80" # Richable only on local
+  
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=sample
+      - MYSQL_DATABASE=wordpress
+  #  volumes:
+  #    - ./mysql/data:/var/lib/mysql
